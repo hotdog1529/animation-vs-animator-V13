@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animator OS V13</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="desktop">
+
+  <!-- Taskbar -->
+  <div id="taskbar">Start | Animator OS</div>
+
+  <!-- Icons -->
+  <div class="icon" onclick="openApp('paint')">🎨 Paint</div>
+  <div class="icon" onclick="openApp('notepad')">📝 Notepad</div>
+  <div class="icon" onclick="openApp('antivirus')">🛡 Antivirus</div>
+  <div class="icon" onclick="openApp('chatgpt')">🤖 ChatGPT</div>
+
+  <!-- Windows -->
+  <div class="window hidden" id="paint">
+    <div class="titlebar">Paint <button onclick="closeApp('paint')">X</button></div>
+  </div>
+
+  <div class="window hidden" id="notepad">
+    <div class="titlebar">Notepad <button onclick="closeApp('notepad')">X</button></div>
+  </div>
+
+  <div class="window hidden" id="antivirus">
+    <div class="titlebar">Antivirus <button onclick="closeApp('antivirus')">X</button></div>
+    <button onclick="scan()">Scan & Attack</button>
+  </div>
+
+  <div class="window hidden" id="chatgpt">
+    <div class="titlebar">ChatGPT <button onclick="closeApp('chatgpt')">X</button></div>
+    <button onclick="chatAttack()">Help Fight</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <div id="cursor"></div>
+
+  <!-- BSOD -->
+  <div id="bsod" class="hidden">
+    <h1>:(</h1>
+    <p>Stickman defeated</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
